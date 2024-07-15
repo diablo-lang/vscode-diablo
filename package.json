@@ -1,0 +1,30 @@
+{
+  "name": "diablo-lang",
+  "displayName": "Diablo Language",
+  "description": "The Diablo Programming Language",
+  "icon": "img/logo.png",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.91.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "diablo",
+      "aliases": ["Diablo", "diablo"],
+      "extensions": [".dbl"],
+      "icon": {
+        "light": "./img/logo.png",
+        "dark": "./img/logo.png"
+      },
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "diablo",
+      "scopeName": "source.dbl",
+      "path": "./syntaxes/diablo.tmLanguage.json"
+    }]
+  }
+}

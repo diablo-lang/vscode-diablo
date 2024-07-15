@@ -1,0 +1,38 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Diablo",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [
+				{
+					"name": "keyword.control.diablo",
+					"match": "\\b(if|print|while|for|return)\\b"
+				},
+				{
+					"name": "keyword.diablo",
+					"match": "\\b(let|fn|print|and|else|while|false|true|or|nil|if)\\b"
+				}
+		        ]
+		},
+		"strings": {
+			"name": "string.quoted.double.diablo",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.diablo",
+					"match": "\\\\."
+				}
+			]
+		}
+	},
+	"scopeName": "source.dbl"
+}
